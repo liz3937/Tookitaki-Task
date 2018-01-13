@@ -35,9 +35,9 @@ for (j in 1:length(variable)) {   #ensure all variables are continuous
   test_var[,j] <- as.numeric(test_var[,j])
   }
   
-###
+### 
 
-```exploratory
+#exploratory
 
 #correlation plot
 cor_mat_covariates = cor(variable)
@@ -61,7 +61,7 @@ for (k in 10:17) {
 
 ### 
 
-```selection
+#selection
 
 #computing gain of each variable
 gain <- data.frame(var_index=1:p,var_gain=0)
@@ -79,7 +79,7 @@ gain[order(gain$var_gain,decreasing=T),]
 
 ###
 
-```model fitting
+#model fitting
 
 #remove unwanted variable
 var_s <- data.frame(variable[,-3])
@@ -103,10 +103,11 @@ legend(0.95,0.9,legend=c('random forest','gradient boosting'),col=c(1,2),lty=c(1
 
 ###
 
-prob_order <- order(mypred2,decreasing=T)
+prob_order <- order(mypred2,decreasing=T)  #sort customers' bad indicator by probabilities
 test_y_ordered <- test_y[prob_order]
 m/10
 
+#proportion of bad in each decile
 mean(test_y_ordered[1:1024])
 mean(test_y_ordered[1025:2048])
 mean(test_y_ordered[2049:3072])
@@ -118,3 +119,4 @@ mean(test_y_ordered[7169:8192])
 mean(test_y_ordered[8193:9216])
 mean(test_y_ordered[9217:10240])
 
+#end
