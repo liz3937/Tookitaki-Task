@@ -2,12 +2,12 @@
 
 ```
 
-library(randomForest)
-library(tree)
-library(pROC)
-library(gains)
-library(lattice)
-library(gbm)
+library(randomForest)  #classification model
+library(tree)  #classification model
+library(pROC)  #AUC
+library(gains)  #variable comparison
+library(lattice)  #visualisation
+library(gbm)  #classification model
 
 ###
 
