@@ -1,5 +1,7 @@
 # Tookitaki test question
 
+```
+
 library(randomForest)
 library(tree)
 library(pROC)
@@ -32,8 +34,8 @@ for (j in 1:length(variable)) {   #ensure all variables are continuous
   variable[,j] <- as.numeric(variable[,j])
   test_var[,j] <- as.numeric(test_var[,j])
   }
-
-### 
+  
+###
 
 ```exploratory
 
